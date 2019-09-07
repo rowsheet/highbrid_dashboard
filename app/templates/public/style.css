@@ -2,10 +2,9 @@
 /*------------------------------------------------------------------------------
 Nav styles.
 ------------------------------------------------------------------------------*/
-.col-3 { padding: 0px; }
-.col-6 { padding: 0px; }
-.col-9 { padding: 0px; }
-.col-12 { padding: 0px; }
+.col-3,.col-4,.col-4,.col-6,.col-9,.col-12 {
+    padding: 0px;
+ }
 .main_card {
     padding: 5px;
     margin: 5px;
@@ -15,6 +14,7 @@ Nav styles.
 ------------------------------------------------------------------------------*/
 nav#main-nav {
     padding: 0px;
+    padding-right: 10px;
 }
 .fas {
     font-size: 21px;
@@ -57,14 +57,20 @@ button#navbarDropdownFeedback i {
     font-size: 13px;
 }
 input#navbarSearch {
+    height: 30px;
     font-size: 13px;
 }
 nav * {
     font-weight: 200;
 }
 .nav-row {
-    padding-left: 5px;
     padding-right: 5px;
+}
+.nav-bold-link {
+    font-weight: 500 !important;
+}
+.nav-bold-link:hover {
+    color: #4f566b !important;
 }
 /*------------------------------------------------------------------------------
 All font-family should be Raleway.
@@ -92,8 +98,28 @@ div#layout_wrapper {
 /*------------------------------------------------------------------------------
 Make the sidebar labels right of the icons.
 ------------------------------------------------------------------------------*/
+span.sidebar_label_main {
+    margin-left: 5px;
+}
 span.sidebar_label {
     margin-left: 9px;
+}
+.sidebar-icon {
+    margin-left: 5px;
+}
+p.sidebar-item {
+    margin-bottom: 5px;
+}
+a.sidebar-item:hover {
+    text-decoration: none;
+    color: #556CD6 !important;
+}
+a.sidebar-item {
+    color: black !important;
+}
+/* Sub-sidebar */
+span.sub_sidebar_label {
+    margin-left: 22px;
 }
 /*------------------------------------------------------------------------------
 Panels
@@ -103,5 +129,45 @@ Panels
     margin-right: 10x;
     margin-top: 10px;
     box-shadow: 0 7px 14px 0 rgba(60,66,87, .12), 0 3px 6px 0 rgba(0,0,0, .12);
+}
+/*------------------------------------------------------------------------------
+Color settings
+------------------------------------------------------------------------------*/
+a.nav-bold-link {
+    color: #556CD6 !important;
+}
+a.nav-bold-link * {
+    color: #556CD6 !important;
+}
+/*------------------------------------------------------------------------------
+Icon helpers
+------------------------------------------------------------------------------*/
+.small-icon {
+    font-size: 13px;
+}
+a .small-icon {
+    font-size: 13px;
+}
+/*------------------------------------------------------------------------------
+Tile Rows
+------------------------------------------------------------------------------*/
+.tile_row {
+    padding: 15px;
+}
+.tile-footer-intervals {
+    margin-bottom: -17px;
+}
+.tile_row_content {
+    min-height: 100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.tile_error p {
+    margin: 0px;
+    text-align: center;
+}
+.tile_error {
+    font-weight: 300;
+    font-size: 13px;
 }
 </style>

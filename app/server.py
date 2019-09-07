@@ -6,8 +6,12 @@ import base64
 app = Flask(__name__,template_folder="templates")
 
 @app.route("/", methods=["GET", "POST"])
-def v1_charges():
+def home():
         return render_template("pages/home.html", foo="Foo")
+
+@app.route("/customers", methods=["GET", "POST"])
+def customers():
+        return render_template("pages/customers.html", foo="Foo")
 
 @app.route("/ping", methods=["POST", "GET"])
 def ping():
