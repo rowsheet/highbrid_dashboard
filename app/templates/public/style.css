@@ -170,4 +170,57 @@ Tile Rows
     font-weight: 300;
     font-size: 13px;
 }
+/* Tile alerts */
+.tile_alert {
+    background: #f7fafc;
+    box-shadow: inset 0 1px #e6ebf1, inset 0 -1px #e6ebf1;
+}
+.tile_alert {
+    text-align: center;
+    color: #bbcadc;
+}
+.tile_alert p {
+    padding-top: 35px;
+}
+/* Tile indicators */
+.selector-inactive {
+    color: #b5b5b5;
+}
+.selector-active {
+    color: #2196F3;
+}
+.tile-footer-intervals a {
+    font-size: 13px;
+}
+/* Tile content */
+.tile_row p {
+    margin-bottom: 0px;
+}
+.tile_content {
+    text-align: left;
+}
+.tile_content h1 {
+    color: #556cd6;
+}
+.tile_content h2{
+    color: #556cd6;
+}
+.tile_content p {
+    color: #697386;
+}
+.tile_content h5 {
+    color: #556cd6;
+}
+.info_blue {
+    color: #556cd6;
+}
+/*------------------------------------------------------------------------------
+Sales Info
+------------------------------------------------------------------------------*/
+ul {
+    list-style: none;
+}
+span.info_green {
+    color: #4CAF50;
+}
 </style>
