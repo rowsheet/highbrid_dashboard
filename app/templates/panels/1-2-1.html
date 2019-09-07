@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-3">
+        {% with content=content_one %}
+            {% include "panels/panel.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-6">
+        {% with content=content_two %}
+            {% include "panels/panel.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-3">
+        {% with content=content_three %}
+            {% include "panels/panel.html" %}
+        {% endwith %}
+    </div>
+</div>

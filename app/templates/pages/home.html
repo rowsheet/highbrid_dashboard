@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    {% with content_one="Content One" %}
+        {% include "panels/4.html" %}
+    {% endwith %}
+
+    {% with content_one="Content One",
+            content_two="Content Two" %}
+        {% include "panels/3-1.html" %}
+    {% endwith %}
+
+    {% with content_one="Content One",
+            content_two="Content Two" %}
+        {% include "panels/2-2.html" %}
+    {% endwith %}
+
+    {% with content_one="Content One",
+            content_two="Content Two" %}
+        {% include "panels/1-3.html" %}
+    {% endwith %}
+
+    {% with content_one="Content One",
+            content_two="Content Two",
+            content_three="Content Three" %}
+        {% include "panels/1-1-2.html" %}
+    {% endwith %}
+
+    {% with content_one="Content One",
+            content_two="Content Two",
+            content_three="Content Three" %}
+        {% include "panels/1-2-1.html" %}
+    {% endwith %}
+
+    {% with content_one="Content One",
+            content_two="Content Two",
+            content_three="Content Three",
+            content_four="Content Four" %}
+        {% include "panels/1-1-1-1.html" %}
+    {% endwith %}
+
+{% endblock %}
