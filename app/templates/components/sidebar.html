@@ -229,9 +229,35 @@ td {
     background: #4F5158;
     border: 1px solid #4F5158;
 }
+/* Dashboard Cards */
+.dashboard_card {
+    box-shadow: 0 7px 14px 0 rgba(60,66,87, .12), 0 3px 6px 0 rgba(0,0,0, .12);
+}
 /* Nav Tab Pills */
 a.nav-link.active {
     color: white !important;
+}
+ul.main_tab.nav-pills {
+    background: #f8f9fc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.main_tab li.nav-item {
+    box-shadow: 1px 0px #e0e0e0;
+}
+.main_tab.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: white;
+    color: #4e73df !important;
+    border-bottom: 3px solid #4e73df;
+    border-radius: 0px !important;
+}
+.main_tab.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.main_tab a.nav-link {
+    padding-top: 13px !important;
+    padding-bottom: 10px !important;
 }
 </style>
 <!-- Sidebar - Brand -->
