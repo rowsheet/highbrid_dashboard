@@ -1,4 +1,48 @@
+CRUD Operations
+Connecting to things (this key here, etc)
+    Time series graphs
+    Non-time series graphs
+    KPIs
+"Multi-tasking" (one post => multiple outlets, one button, sync multiple places)
+Automation/Scheduling/Planning
+POS (take money, eventually deposit)
+Really fucking obvious
+
 Red notification symbol for top bell
 Flip the magnifying glass to point right
 Center alert message
 Make social thing a table
+
+(Onboarding)
+Access Control
+    Storefront Service Keys (i.e. Metric)
+    Social Keys (i.e. Facebok, Twitter)
+    Orgination ACL for Employees
+    DNS Credentials
+
+(Operations)
+Customers
+    Social Media
+    Subscriptsions
+    Feedback & Support
+
+Storefront
+    Sales
+    Inventory
+    *Current Promoted Sepcials
+
+Content
+    Social Posts
+    Website
+    *Current Promoted Sepcials
+    *Schulling News Letters
+
+Operations
+    Employees
+    Payroll Hisotry (HR)
+    Scheules
+    Documents
+
+Automation
+    Schduling Inventory Sync
+    Schulling News Letters
