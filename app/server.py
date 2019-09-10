@@ -13,51 +13,74 @@ def public(path):
 def home():
         return render_template("pages/home.html")
 
-@app.route("/blog", methods=["GET", "POST"])
-def blog():
-        return render_template("pages/blog.html")
+@app.route("/users", methods=["GET", "POST"])
+def users():
+        return render_template("pages/users.html")
+@app.route("/loyalty_members", methods=["GET", "POST"])
+def loyalty_members():
+        return render_template("pages/loyalty_members.html")
+@app.route("/subscribers", methods=["GET", "POST"])
+def subscribers():
+        return render_template("pages/subscribers.html")
+
+@app.route("/storefront", methods=["GET", "POST"])
+def storefront():
+        return render_template("pages/storefront.html")
+@app.route("/promotions", methods=["GET", "POST"])
+def promotions():
+        return render_template("pages/promotions.html")
 @app.route("/catalog", methods=["GET", "POST"])
 def catalog():
         return render_template("pages/catalog.html")
+@app.route("/inventory", methods=["GET", "POST"])
+def inventory():
+        return render_template("pages/inventory.html")
+@app.route("/orders_and_sales", methods=["GET", "POST"])
+def orders_and_sales():
+        return render_template("pages/orders_and_sales.html")
+
+@app.route("/website", methods=["GET", "POST"])
+def website():
+        return render_template("pages/website.html")
+@app.route("/pages", methods=["GET", "POST"])
+def pages():
+        return render_template("pages/pages.html")
+@app.route("/blog", methods=["GET", "POST"])
+def blog():
+        return render_template("pages/blog.html")
+@app.route("/seo", methods=["GET", "POST"])
+def seo():
+        return render_template("pages/seo.html")
+
+@app.route("/marketing", methods=["GET", "POST"])
+def marketing():
+        return render_template("pages/marketing.html")
 @app.route("/email", methods=["GET", "POST"])
 def email():
         return render_template("pages/email.html")
+@app.route("/text", methods=["GET", "POST"])
+def text():
+        return render_template("pages/text.html")
+
+@app.route("/social", methods=["GET", "POST"])
+def social():
+        return render_template("pages/social.html")
 @app.route("/facebook", methods=["GET", "POST"])
 def facebook():
         return render_template("pages/facebook.html")
 @app.route("/instagram", methods=["GET", "POST"])
 def instagram():
         return render_template("pages/instagram.html")
-@app.route("/inventory", methods=["GET", "POST"])
-def inventory():
-        return render_template("pages/inventory.html")
-@app.route("/loyalty_members", methods=["GET", "POST"])
-def loyalty_members():
-        return render_template("pages/loyalty_members.html")
-@app.route("/metrc", methods=["GET", "POST"])
-def metrc():
-        return render_template("pages/metrc.html")
-@app.route("/orders_and_sales", methods=["GET", "POST"])
-def orders_and_sales():
-        return render_template("pages/orders_and_sales.html")
-@app.route("/pages", methods=["GET", "POST"])
-def pages():
-        return render_template("pages/pages.html")
-@app.route("/promotions", methods=["GET", "POST"])
-def promotions():
-        return render_template("pages/promotions.html")
-@app.route("/seo", methods=["GET", "POST"])
-def seo():
-        return render_template("pages/seo.html")
-@app.route("/subscribers", methods=["GET", "POST"])
-def subscribers():
-        return render_template("pages/subscribers.html")
-@app.route("/text", methods=["GET", "POST"])
-def text():
-        return render_template("pages/text.html")
 @app.route("/yelp", methods=["GET", "POST"])
 def yelp():
         return render_template("pages/yelp.html")
+
+@app.route("/compliance", methods=["GET", "POST"])
+def compliance():
+        return render_template("pages/compliance.html")
+@app.route("/metrc", methods=["GET", "POST"])
+def metrc():
+        return render_template("pages/metrc.html")
 
 #-------------------------------------------------------------------------------
 # Demo pages.
