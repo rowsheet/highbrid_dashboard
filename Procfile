@@ -1,1 +1,1 @@
-web: gunicorn __main__template:app
+web: python3 server.js
