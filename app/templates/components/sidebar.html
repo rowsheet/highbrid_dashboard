@@ -63,9 +63,6 @@ footer.bg-white {
     height: 34px;
 }
 .navbar a.nav-link {
-    box-shadow: 0 2px 5px 0 rgba(60,66,87, .12), 0 1px 1px 0 rgba(0,0,0, .12) !important;
-    background: white !important;
-    border-radius: 100px;
     padding: 3px !important;
     height: 37px !important;
     width: 38px !important;
@@ -269,14 +266,40 @@ ul.main_tab.nav-pills {
     padding-top: 13px !important;
     padding-bottom: 10px !important;
 }
+/* Sidebar Brand */
 .sidebar-brand * {
  color: #4b5458
+}
+.sidebar-brand-text {
+    text-transform: lowercase;
+    color: #8BC34A;
+    font-size: 29px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+    text-shadow: 0px 0px 7px #ffffff7a, 0px 0px 9px #ffffffa3, 0px 0px 21px #ffffffa3;
+    margin-left: -15px !important;
+    font-weight: 500;
+}
+div#logo {
+    background: #8BC34A;
+    color: white;
+    height: 50px;
+    width: 50px;
+    font-size: 19px;
+    text-transform: lowercase;
+    font-weight: 400;
+    padding-top: 11px;
+    margin-right: 10px;
+    margin-left: 21px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(60,66,87, .12), 0 1px 1px 0 rgba(0,0,0, .12) !important;
 }
 </style>
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-    <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+    <div class="sidebar-brand-icon">
+        <div id="logo">&#60;h&#47;&#62;</div>
     </div>
     <div class="sidebar-brand-text mx-3">highbrid.io</div>
 </a>
