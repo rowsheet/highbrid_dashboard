@@ -13,6 +13,38 @@ def public(path):
 def home():
         return render_template("pages/home.html")
 
+@app.route("/customers", methods=["GET", "POST"])
+def customers():
+        return render_template("pages/customers_overview.html")
+
+@app.route("/social-media", methods=["GET", "POST"])
+def social_media_overview():
+        return render_template("pages/social_media_overview.html")
+
+@app.route("/sales", methods=["GET", "POST"])
+def sales_overview():
+        return render_template("pages/sales_overview.html")
+
+@app.route("/storefront", methods=["GET", "POST"])
+def storefront_overview():
+        return render_template("pages/storefront_overview.html")
+
+@app.route("/inventory", methods=["GET", "POST"])
+def inventory_overview():
+        return render_template("pages/inventory_overview.html")
+
+@app.route("/operations", methods=["GET", "POST"])
+def operations_overview():
+        return render_template("pages/operations_overview.html")
+
+@app.route("/analytics", methods=["GET", "POST"])
+def analytics_overview():
+        return render_template("pages/analytics_overview.html")
+
+@app.route("/integrations", methods=["GET", "POST"])
+def integrations_overview():
+        return render_template("pages/integrations_overview.html")
+
 #-------------------------------------------------------------------------------
 # Demo pages.
 #-------------------------------------------------------------------------------
@@ -20,10 +52,6 @@ def home():
 @app.route("/demo/home", methods=["GET", "POST"])
 def demo_home():
         return render_template("pages/demo/home.html", foo="Foo")
-
-@app.route("/demo/customers", methods=["GET", "POST"])
-def demo_customers():
-        return render_template("pages/demo/customers.html", foo="Foo")
 
 @app.route("/demo/buttons", methods=["GET", "POST"])
 def demo_buttons():
