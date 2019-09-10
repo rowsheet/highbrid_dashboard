@@ -1,0 +1,3 @@
+*.gif
+/.flaskenv
+/__pycache__/
