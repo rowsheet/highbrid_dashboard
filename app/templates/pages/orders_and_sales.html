@@ -9,7 +9,29 @@
 {% block page_content %}
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Orders & Sales</h1>
+    <h1 class="h4 mb-0 text-gray-800">Orders & Sales</h1>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-3">
+        {% with theme="storefront" %}
+        {% include "components/kpi_card.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-md-3">
+        {% with theme="storefront" %}
+        {% include "components/kpi_card.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-md-3">
+        {% with theme="storefront" %}
+        {% include "components/kpi_card.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-md-3">
+        {% with theme="storefront" %}
+        {% include "components/kpi_card.html" %}
+        {% endwith %}
+    </div>
 </div>
 <div class="row dashboard_row">
     <div class="col-md-12">
@@ -27,20 +49,36 @@
         <br>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="tab-one">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Orders</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        {% with chart_name="Orders" %}
+                        {% include "components/examples/line_chart.html" %}
+                        {% endwith %}
                     </div>
-                    <div class="card-body">
-                        {% include "components/examples/table.html" %}
+                    <div class="col-md-6">
+                        {% with chart_name="Sales" %}
+                        {% include "components/examples/line_chart.html" %}
+                        {% endwith %}
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="tab-two">
-                Two
+                <div class="dashboard_card card mb-4">
+                    <div class="card-body">
+                        {% with table_name="orders" %}
+                        {% include "components/examples/table.html" %}
+                        {% endwith %}
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="tab-three">
-                Three
+                <div class="dashboard_card card mb-4">
+                    <div class="card-body">
+                        {% with table_name="sales" %}
+                        {% include "components/examples/table.html" %}
+                        {% endwith %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
