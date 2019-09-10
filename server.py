@@ -5,13 +5,13 @@ import requests
 import base64
 app = Flask(__name__,template_folder="templates")
 
-@app.route('/public/<path:path>')
-def public(path):
-    return send_from_directory('public', path)
-
 @app.route("/", methods=["GET", "POST"])
 def home():
         return render_template("pages/home.html")
+
+@app.route('/public/<path:path>')
+def public(path):
+    return send_from_directory('public', path)
 
 @app.route("/users", methods=["GET", "POST"])
 def users():
