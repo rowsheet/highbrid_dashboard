@@ -13,12 +13,23 @@
 </div>
 <div class="row dashboard_row">
     <div class="col-md-3">
-        {% with theme="website" %}
+        {% with 
+            theme="website",
+            title="something",
+            info="90%",
+            bar="30"
+        %}
         {% include "components/kpi_card.html" %}
         {% endwith %}
     </div>
     <div class="col-md-3">
-        {% with theme="website" %}
+        {% with 
+            theme="website",
+            title="something",
+            info="90%",
+            bar="30",
+            icon="fa-bell"
+        %}
         {% include "components/kpi_card.html" %}
         {% endwith %}
     </div>
