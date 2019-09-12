@@ -74,22 +74,14 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="tab-two">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-body">
-                        {% with table_name="orders" %}
-                        {% include "components/examples/table.html" %}
-                        {% endwith %}
-                    </div>
-                </div>
+                {% with table_name="orders" %}
+                {% include "components/examples/table.html" %}
+                {% endwith %}
             </div>
             <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="tab-three">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-body">
-                        {% with table_name="sales" %}
-                        {% include "components/examples/table.html" %}
-                        {% endwith %}
-                    </div>
-                </div>
+                {% with table_name="sales" %}
+                {% include "components/examples/table.html" %}
+                {% endwith %}
             </div>
         </div>
     </div>

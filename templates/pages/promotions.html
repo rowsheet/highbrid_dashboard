@@ -34,6 +34,28 @@
     </div>
 </div>
 <div class="row dashboard_row">
+    <div class="col-md-3">
+        {% with theme="storefront" %}
+        {% include "components/kpi_card.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-md-3">
+        {% with theme="storefront" %}
+        {% include "components/kpi_card.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-md-3">
+        {% with theme="storefront" %}
+        {% include "components/kpi_card.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-md-3">
+        {% with theme="storefront" %}
+        {% include "components/kpi_card.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
     <div class="col-md-12">
         <ul class="dashboard_card main_tab nav nav-pills nav-justified" id="myTab" role="tablist">
             <li class="nav-item">
@@ -52,33 +74,46 @@
                 <div class="row">
                     <div class="col-md-6">
                         {% with chart_name="Orders" %}
-                        {% include "components/examples/line_chart.html" %}
+                        {% include "components/examples/bar_chart.html" %}
+                        {% endwith %}
+                        {% with chart_name="Other" %}
+                        {% include "components/examples/red_blue_bar_chart.html" %}
+                        {% endwith %}
+                        {% with chart_name="Donut Example" %}
+                        {% include "components/examples/donut_chart.html" %}
+                        {% endwith %}
+                        {% with chart_name="Mixed Chart Example" %}
+                        {% include "components/examples/mixed_chart.html" %}
+                        {% endwith %}
+                        {% with chart_name="Bubble Chart Example" %}
+                        {% include "components/examples/bubble_chart.html" %}
                         {% endwith %}
                     </div>
                     <div class="col-md-6">
                         {% with chart_name="Sales" %}
                         {% include "components/examples/line_chart.html" %}
                         {% endwith %}
+                        {% with chart_name="Polar" %}
+                        {% include "components/examples/polar_area.html" %}
+                        {% endwith %}
+                        {% with chart_name="Example Stacked Bar Chart" %}
+                        {% include "components/examples/stacked_bar_chart.html" %}
+                        {% endwith %}
+                        {% with chart_name="Example Stacked Area Chart" %}
+                        {% include "components/examples/stacked_area_chart.html" %}
+                        {% endwith %}
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="tab-two">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-body">
-                        {% with table_name="orders" %}
-                        {% include "components/examples/table.html" %}
-                        {% endwith %}
-                    </div>
-                </div>
+                {% with table_name="orders" %}
+                {% include "components/examples/table.html" %}
+                {% endwith %}
             </div>
             <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="tab-three">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-body">
-                        {% with table_name="sales" %}
-                        {% include "components/examples/table.html" %}
-                        {% endwith %}
-                    </div>
-                </div>
+                {% with table_name="sales" %}
+                {% include "components/examples/table.html" %}
+                {% endwith %}
             </div>
         </div>
     </div>

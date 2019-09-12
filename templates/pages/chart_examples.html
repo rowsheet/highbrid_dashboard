@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block page_level_css %}
+{% endblock %}
+
+{% block page_level_js %}
+{% endblock %}
+
+{% block page_content %}
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h4 mb-0 text-gray-800">Example Components</h1>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with timeline_name="Exapmle Timeline" %}
+        {% include "components/examples/timeline.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Orders" %}
+        {% include "components/examples/bar_chart.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Other" %}
+        {% include "components/examples/red_blue_bar_chart.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Donut Example" %}
+        {% include "components/examples/donut_chart.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Mixed Chart Example" %}
+        {% include "components/examples/mixed_chart.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Bubble Chart Example" %}
+        {% include "components/examples/bubble_chart.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Sales" %}
+        {% include "components/examples/line_chart.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Polar" %}
+        {% include "components/examples/polar_area.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Example Stacked Bar Chart" %}
+        {% include "components/examples/stacked_bar_chart.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with chart_name="Example Stacked Area Chart" %}
+        {% include "components/examples/stacked_area_chart.html" %}
+        {% endwith %}
+    </div>
+</div>
+<div class="row dashboard_row">
+    <div class="col-md-12">
+        {% with table_name="Example Table" %}
+        {% include "components/examples/table.html" %}
+        {% endwith %}
+    </div>
+</div>
+{% endblock %}

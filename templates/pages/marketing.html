@@ -37,48 +37,63 @@
     <div class="col-md-12">
         <ul class="dashboard_card main_tab nav nav-pills nav-justified" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="tab-one" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">Home</a>
+                <a class="nav-link active" id="tab-one" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">Overview</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab-two" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">Profile</a>
+                <a class="nav-link" id="tab-two" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">Calendar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab-three" data-toggle="tab" href="#three" role="tab" aria-controls="three" aria-selected="false">Contact</a>
+                <a class="nav-link" id="tab-three" data-toggle="tab" href="#three" role="tab" aria-controls="three" aria-selected="false">
+                    <i class="fas fa-fw fa-plus-square blue_icon"></i>
+                    New Campaign
+                </a>
             </li>
         </ul>
         <br>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="tab-one">
+            <div class="tab-pane fade" id="one" role="tabpanel" aria-labelledby="tab-one">
                 <div class="row">
-                    <div class="col-md-6">
-                        {% with chart_name="Orders" %}
-                        {% include "components/examples/line_chart.html" %}
-                        {% endwith %}
+                    <div class="col-md-3">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h4 mb-0 text-gray-800">My Campaigns</h1>
+</div>
+<ul class="list-group">
+    <li class="list-group-item active">
+        Forbidden Fruit Product Release
+    </li>
+    <li class="list-group-item">
+        Med Card Members 
+    </li>
+    <li class="list-group-item">
+        Brand-New Products
+    </li>
+    <li class="list-group-item">Porta ac consectetur ac</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+</ul>
                     </div>
-                    <div class="col-md-6">
-                        {% with chart_name="Sales" %}
-                        {% include "components/examples/line_chart.html" %}
-                        {% endwith %}
+                    <div class="col-md-9">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h4 mb-0 text-gray-800">Overview</h1>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        {% with chart_name="Donut Example" %}
+        {% include "components/examples/donut_chart.html" %}
+        {% endwith %}
+    </div>
+    <div class="col-md-6">
+    </div>
+</div>
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="tab-two">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-body">
-                        {% with table_name="orders" %}
-                        {% include "components/examples/table.html" %}
-                        {% endwith %}
-                    </div>
-                </div>
+                {% with table_name="sales" %}
+                {% include "components/examples/table.html" %}
+                {% endwith %}
             </div>
-            <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="tab-three">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-body">
-                        {% with table_name="sales" %}
-                        {% include "components/examples/table.html" %}
-                        {% endwith %}
-                    </div>
-                </div>
+            <div class="tab-pane fade show active" id="three" role="tabpanel" aria-labelledby="tab-three">
+                {% include "forms/create_new_campaign.html" %}
             </div>
         </div>
     </div>

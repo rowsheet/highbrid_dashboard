@@ -12,23 +12,51 @@
     <h1 class="h4 mb-0 text-gray-800">Loyalty Members</h1>
 </div>
 <div class="row dashboard_row">
-    <div class="col-md-3">
-        {% with theme="user" %}
+    <div class="col-lg-3 col-sm-6">
+        {% with
+            theme="user",
+            title="Loyalty Member Activity",
+            info="35%",
+            icon="fa-address-card",
+            bar="35",
+            subtext=True,
+            subtext_left="43",
+            subtext_right="120"
+        %}
         {% include "components/kpi_card.html" %}
         {% endwith %}
     </div>
-    <div class="col-md-3">
-        {% with theme="user" %}
+    <div class="col-lg-3 col-sm-6">
+        {% with
+            theme="user",
+            title="Applied Discounts",
+            info="5% total orders",
+            subinfo="$295 value",
+            icon="fa-tags",
+            subtext=True,
+            subtext_right="total orders"
+        %}
         {% include "components/kpi_card.html" %}
         {% endwith %}
     </div>
-    <div class="col-md-3">
-        {% with theme="user" %}
+    <div class="col-lg-3 col-sm-6">
+        {% with
+            theme="user",
+            title="Unclaimed Rewards",
+            info="435 pts",
+            subinfo="$675 est. value",
+            icon="fa-money-check"
+        %}
         {% include "components/kpi_card.html" %}
         {% endwith %}
     </div>
-    <div class="col-md-3">
-        {% with theme="user" %}
+    <div class="col-lg-3 col-sm-6">
+        {% with
+            theme="user",
+            title="Avg. Member Spending / Visit",
+            info="$120",
+            icon="fa-receipt"
+        %}
         {% include "components/kpi_card.html" %}
         {% endwith %}
     </div>
@@ -37,13 +65,19 @@
     <div class="col-md-12">
         <ul class="dashboard_card main_tab nav nav-pills nav-justified" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="tab-one" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">Home</a>
+                <a class="nav-link active" id="tab-one" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">
+                    Member Spending
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab-two" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">Profile</a>
+                <a class="nav-link" id="tab-two" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">
+                    Spending History
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab-three" data-toggle="tab" href="#three" role="tab" aria-controls="three" aria-selected="false">Contact</a>
+                <a class="nav-link" id="tab-three" data-toggle="tab" href="#three" role="tab" aria-controls="three" aria-selected="false">
+                    Rewards Tracking
+                </a>
             </li>
         </ul>
         <br>
@@ -51,34 +85,26 @@
             <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="tab-one">
                 <div class="row">
                     <div class="col-md-6">
-                        {% with chart_name="Orders" %}
+                        {% with chart_name="Member Cash Sales" %}
                         {% include "components/examples/line_chart.html" %}
                         {% endwith %}
                     </div>
                     <div class="col-md-6">
-                        {% with chart_name="Sales" %}
+                        {% with chart_name="Member Reward Spending" %}
                         {% include "components/examples/line_chart.html" %}
                         {% endwith %}
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="tab-two">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-body">
-                        {% with table_name="orders" %}
-                        {% include "components/examples/table.html" %}
-                        {% endwith %}
-                    </div>
-                </div>
+                {% with table_name="orders" %}
+                {% include "components/examples/table.html" %}
+                {% endwith %}
             </div>
             <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="tab-three">
-                <div class="dashboard_card card mb-4">
-                    <div class="card-body">
-                        {% with table_name="sales" %}
-                        {% include "components/examples/table.html" %}
-                        {% endwith %}
-                    </div>
-                </div>
+                {% with table_name="sales" %}
+                {% include "components/examples/table.html" %}
+                {% endwith %}
             </div>
         </div>
     </div>

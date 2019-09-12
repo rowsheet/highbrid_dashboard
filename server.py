@@ -12,6 +12,9 @@ def public(path):
 @app.route("/", methods=["GET", "POST"])
 def home():
         return render_template("pages/home.html")
+@app.route("/view-site", methods=["GET", "POST"])
+def view_site():
+        return render_template("pages/chart_examples.html")
 
 @app.route("/users", methods=["GET", "POST"])
 def users():

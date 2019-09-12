@@ -1,0 +1,68 @@
+{% include "components/examples/chart_util.html" %}
+<script>
+$(document).ready(function() {
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var config = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    window.chartColors.blue,
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                'Red',
+                'Orange',
+                'Yellow',
+                'Green',
+                'Blue'
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Chart.js Doughnut Chart'
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+    var ctx = document.getElementById('{{ chart_name }}').getContext('2d');
+    window.myDoughnut = new Chart(ctx, config);
+});
+</script>
+<div class="dashboard_card card mb-4">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">{{ chart_name }}</h6>
+    </div>
+    <div class="card-body">
+        <div class="chart-area">
+            <canvas id="{{ chart_name }}"></canvas>
+        </div>
+    </div>
+    <div class="card-footer">
+something
+    </div>
+</div>

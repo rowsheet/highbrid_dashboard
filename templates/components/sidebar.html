@@ -1,4 +1,13 @@
 <style>
+/* Timeline */
+.timeline .row.h-50 .col:nth-child(2) {
+    box-shadow: -1px 0px 0px #0000001c;
+}
+/* Charts */
+.chart-area {
+    height: 300px;
+}
+/* Nav */
 a.nav-link {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
@@ -79,6 +88,25 @@ span.mr-2.d-none.d-lg-inline.text-gray-600.small {
 }
 .kpi_card_row {
     margin-bottom: 9px;
+}
+/* KPI subtext */
+.kpi_subtext p {
+    line-height: 0px;
+}
+.kpi_subtext {
+    background: red;
+    height: 0px;
+    margin-bottom: -15px;
+}
+.kpi_card.card-body {
+    height: 91px;
+}
+.kpi_subtext_center {
+    margin-bottom: -16px;
+    margin-top: 16px;
+}
+.kpi_subtext_left {
+    margin-bottom: -16px;
 }
 /* Users
 YELOW */
@@ -210,7 +238,7 @@ BLUE */
 }
 /* Dashbaord Row */
 .dashboard_row {
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 /* Nav margin */
 a.nav-link {
@@ -295,6 +323,49 @@ div#logo {
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgba(60,66,87, .12), 0 1px 1px 0 rgba(0,0,0, .12) !important;
 }
+/* Icons */
+i.fab.blue_icon,
+i.fas.blue_icon {
+    color: #4e73df !important;
+}
+/* Search Box */
+.search_box {
+    box-shadow: 0 2px 5px 0 rgba(60,66,87, .12), 0 1px 1px 0 rgba(0,0,0, .12) !important;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.search_box button {
+    background: #f3f7fd;
+    border: none;
+    color: #607D8B;
+    box-shadow: 0 2px 5px 0 rgba(60,66,87, .12), 0 1px 1px 0 rgba(0,0,0, .12) !important
+}
+/* Add New */
+.add_new {
+    box-shadow: 0 2px 5px 0 rgba(60,66,87, .12), 0 1px 1px 0 rgba(0,0,0, .12) !important;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/* List Groups */
+.list-group {
+    box-shadow: 0 2px 5px 0 rgba(60,66,87, .12), 0 1px 1px 0 rgba(0,0,0, .12) !important;
+    border-radius: 5px;
+}
+.list-group li {
+    border: none;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+li.list-group-item.active {
+    background: #f3f7fd;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    color: black;
+}
+li.list-group-item {
+    background: white;
+    color: #4e73df;
+}
 </style>
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
@@ -313,7 +384,7 @@ div#logo {
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item">
-    <a class="nav-link" href="/">
+    <a class="nav-link" href="/view-site">
         <i class="fas fa-fw fa-globe"></i>
         <span>View Site</span>
     </a>
@@ -398,14 +469,6 @@ div#logo {
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item">
-    <a class="nav-link" href="/blog">
-        <i class="fas fa-fw fa-quote-right"></i>
-        <span>Blog</span>
-    </a>
-</li>
-
-<!-- Nav Item - Dashboard -->
-<li class="nav-item">
     <a class="nav-link" href="/seo">
         <i class="fab fa-fw fa-searchengin"></i>
         <span>SEO</span>
@@ -423,7 +486,7 @@ div#logo {
 <li class="nav-item">
     <a class="nav-link" href="/email">
         <i class="fas fa-fw fa-mail-bulk"></i>
-        <span>Email <small>(Newsletters)</small></span>
+        <span>Newsletters</small></span>
     </a>
 </li>
 
@@ -431,16 +494,24 @@ div#logo {
 <li class="nav-item">
     <a class="nav-link" href="/text">
         <i class="fas fa-fw fa-comment-dots"></i>
-        <span>SMS <small>(Text-Blasts)</small></span>
+        <span>Text-Blasts</span>
+    </a>
+</li>
+
+<!-- Nav Item - Dashboard -->
+<li class="nav-item">
+    <a class="nav-link" href="/blog">
+        <i class="fas fa-fw fa-quote-right"></i>
+        <span>Blog</span>
     </a>
 </li>
 
 <!-- Heading -->
-<a href="/social">
+<!-- <a href="/social">
     <div class="sidebar-heading">
     Social
     </div>
-</a>
+</a>-->
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item">

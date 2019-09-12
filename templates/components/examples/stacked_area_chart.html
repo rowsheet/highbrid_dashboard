@@ -1,0 +1,118 @@
+{% include "components/examples/chart_util.html" %}
+<script>
+$(document).ready(function() {
+    var presets = window.chartColors;
+    var utils = Samples.utils;
+    var inputs = {
+        min: 20,
+        max: 80,
+        count: 8,
+        decimals: 2,
+        continuity: 1
+    };
+
+    function generateData() {
+        return utils.numbers(inputs);
+    }
+
+    function generateLabels() {
+        return utils.months({count: inputs.count});
+    }
+
+    utils.srand(42);
+
+    var data = {
+        labels: generateLabels(),
+        datasets: [{
+            backgroundColor: utils.transparentize(presets.red),
+            borderColor: presets.red,
+            data: generateData(),
+            label: 'D0'
+        }, {
+            backgroundColor: utils.transparentize(presets.orange),
+            borderColor: presets.orange,
+            data: generateData(),
+            label: 'D1',
+        }, {
+            backgroundColor: utils.transparentize(presets.yellow),
+            borderColor: presets.yellow,
+            data: generateData(),
+            label: 'D2',
+        }, {
+            backgroundColor: utils.transparentize(presets.green),
+            borderColor: presets.green,
+            data: generateData(),
+            label: 'D3',
+        }, {
+            backgroundColor: utils.transparentize(presets.blue),
+            borderColor: presets.blue,
+            data: generateData(),
+            label: 'D4',
+        }, {
+            backgroundColor: utils.transparentize(presets.grey),
+            borderColor: presets.grey,
+            data: generateData(),
+            label: 'D5',
+        }, {
+            backgroundColor: utils.transparentize(presets.purple),
+            borderColor: presets.purple,
+            data: generateData(),
+            label: 'D6',
+        }, {
+            backgroundColor: utils.transparentize(presets.red),
+            borderColor: presets.red,
+            data: generateData(),
+            label: 'D7',
+        }, {
+            backgroundColor: utils.transparentize(presets.orange),
+            borderColor: presets.orange,
+            data: generateData(),
+            label: 'D8',
+        }
+        ]
+    };
+
+    var options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        spanGaps: false,
+        elements: {
+            line: {
+                tension: 0.000001
+            }
+        },
+        scales: {
+            yAxes: [{
+                stacked: true
+            }]
+        },
+        plugins: {
+            filler: {
+                propagate: false
+            },
+            'samples-filler-analyser': {
+                target: 'chart-analyser'
+            }
+        }
+    };
+
+    var chart = new Chart('{{ chart_name }}', {
+        type: 'line',
+        data: data,
+        options: options
+    });
+});
+</script>
+<div class="dashboard_card card mb-4">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">{{ chart_name }}</h6>
+    </div>
+    <div class="card-body">
+        <div class="chart-area">
+            <canvas id="{{ chart_name }}"></canvas>
+        </div>
+    </div>
+    <div class="card-footer">
+something
+    </div>
+</div>
