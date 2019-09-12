@@ -1,3 +1,6 @@
+{% extends "components/dashboard_card.html" %}
+{% block card_body %}
+{% include "components/examples/chart_util.html" %}
 <script>
 $(document).ready(function() {
     // Set new default font family and font color to mimic Bootstrap's default styling
@@ -121,16 +124,15 @@ $(document).ready(function() {
     });
 });
 </script>
-<div class="dashboard_card card mb-4">
-    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">{{ chart_name }}</h6>
-    </div>
-    <div class="card-body">
-        <div class="chart-area">
-            <canvas id="{{ chart_name }}"></canvas>
-        </div>
-    </div>
-    <div class="card-footer">
-something
-    </div>
+<div class="chart-area">
+    <canvas id="{{ chart_name }}"></canvas>
 </div>
+{% endblock %}
+
+{% block card_header %}
+    {{ chart_name }}
+{% endblock %}
+
+{% block card_footer%}
+    something
+{% endblock %}
