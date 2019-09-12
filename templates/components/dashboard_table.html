@@ -1,0 +1,40 @@
+<div class="dashboard_table dashboard_card card mb-4">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-3">
+                <div style="display: flex; justify-content: flex;">
+                    <button class="dashboard_table_button btn btn-default">
+                        <i class="fas fa-filter"></i>
+                        Filter
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <h6 class="m-0 text-dark">
+                    {% block card_header %}
+                    {% endblock %}
+                </h6>
+            </div>
+            <div class="col-md-3 text-right">
+                <div style="display: flex; float: right;" class="buttons_right">
+                    <button class="dashboard_table_button btn btn-default">
+                        <i class="fas fa-plus"></i>
+                        New 
+                    </button>
+                    <button class="dashboard_table_button btn btn-default">
+                        <i class="fas fa-file-export"></i>
+                        Export 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+            {% block card_body%}
+            {% endblock %}
+    </div>
+    <div class="card-footer">
+            {% block card_footer%}
+            {% endblock %}
+    </div>
+</div>

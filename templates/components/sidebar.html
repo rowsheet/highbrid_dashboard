@@ -1,4 +1,35 @@
 <style>
+/* Dashboard Tables */
+.dashboard_table .card-body {
+    padding: 0px;
+}
+.dashboard_table table * {
+    border: none !important;
+}
+.dashboard_table table {
+    border: none;
+    margin-bottom: -1px;
+}
+.dashboard_table table tbody {
+    background: white;
+}
+.dashboard_table table tbody tr {
+    border-bottom: 1px solid #e3e6f0 !important;
+}
+.dashboard_table_button {
+    box-shadow: 0 2px 5px 0 rgba(60,66,87, .12), 0 1px 1px 0 rgba(0,0,0, .12) !important;
+    border: 1px solid #d4d4d4 !important;
+}
+.buttons_right button {
+    margin-left: 10px !important;
+}
+.buttons_right button {
+    display: flex;
+}
+.buttons_right button i.fas {
+    margin-top: 3px;
+    margin-right: 5px;
+}
 /* Timeline */
 .timeline .row.h-50 .col:nth-child(2) {
     box-shadow: -1px 0px 0px #0000001c;
@@ -246,19 +277,6 @@ BLUE */
 a.nav-link {
     padding-left: 33px !important;
 }
-/* Data Tables */
-td {
-    padding: 5px !important;
-}
-.dataTables_paginate .paginate_button a {
-}
-.dataTables_paginate .paginate_button.active a     {
-    background: #4F5158;
-    border: 1px solid #4F5158;
-}
-tr.odd-row {
-    background: #f3f7fd;
-}
 /* Dashboard Cards */
 .dashboard_card {
     box-shadow: 0 7px 14px 0 rgba(60,66,87, .12), 0 3px 6px 0 rgba(0,0,0, .12) !important;
@@ -268,7 +286,7 @@ tr.odd-row {
     background: white;
 }
 .dashboard_card .card-body {
-    background: #f3f7fd;
+    background: #f7fafc;
 }
 .dashboard_card .card-footer {
     background: white;
